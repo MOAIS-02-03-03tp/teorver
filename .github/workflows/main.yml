@@ -16,7 +16,7 @@ jobs:
     - name: Compile LaTeX document
       uses: xu-cheng/latex-action@v3
       with:
-          root_file: main.tex
+          root_file: sprav.tex
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
@@ -35,6 +35,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./main.pdf
-        asset_name: main.pdf
+        asset_path: ./sprav.pdf
+        asset_name: sprav.pdf
         asset_content_type: application/pdf
