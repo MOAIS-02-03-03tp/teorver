@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, total={7in,10in}]{geometry}
+\usepackage{polyglossia}
+\usepackage{ragged2e}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{microtype}
+\usepackage{graphicx}
+\let\ORIincludegraphics\includegraphics
+\renewcommand{\includegraphics}[2][]{\ORIincludegraphics[scale=0.65,#1]{#2}}
+\usepackage{changepage}
+\usepackage{hyperref}
+\usepackage{cancel}
+\graphicspath{{./images/}}
+\setmainlanguage{russian}
+\setotherlanguage{english}
+\newfontfamily\russianfont[Script=Cyrillic]{Times New Roman}
+\newfontfamily\englishfont{Times New Roman}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{6pt}
+
+\def\posl#1#2{\{#1_{#2}\}}
+\DeclareMathOperator*{\sh-like}{\sinh-like}
+\DeclareMathOperator*{\ch-like}{\cosh-like}
+\DeclareMathOperator*{\th-like}{\tanh-like}
+\DeclareMathOperator*{\cth-like}{\coth-like}
+\DeclareMathOperator*{\tg-like}{\tan-like}
+\DeclareMathOperator*{\ctg-like}{\cot-like}
+\DeclareMathOperator*{\arctg-like}{\arctan-like}
+\DeclareMathOperator*{\arcctg-like}{\arctan-like}
+
+\begin{document}
+\section{Вероятность}
+    $\varOmega$ - эл. исходы $\omega \in \varOmega$, A $\sqsubset \varOmega$ сл. соб.\\
+    Опр: A алгебра: $A \in A; \varOmega \in A; A \in A,B \in A \Rightarrow A \lor B, A \land B, \overset{-}{A} \in A$ \\%вторая А везде выебывается, хз как в латексе ее сделать%
+    $\sigma$- алгебра: $\forall \{A_1,\dots,A_n,\dots\}\sqsubset A \Rightarrow U_1^{\infty} A_n \in A$\\
+    Опр: $\Omega, A$ вер-ть: P $A \Rightarrow R$\\
+    \begin{enumerate}
+        \item $P(A) \leq o, \forall A \in A$
+        \item $P(\varOmega)=1$
+        \item $\forall \{A_n\}\sqsubset A,A_i \land A_j = \not o \Rightarrow P(U_1^{\infty}A_n)=\sum_{1}^{\infty}
+        P(A_n) \; \sigma$ - индуктивности
+    \end{enumerate}
+    A+$\overset{-}{A}=\varOmega$\\
+    $P(A+\overset{-}{A})=P(A)+P(\overset{-}{A})=1 \Rightarrow P(A)=1-P(\overset{-}{A})$\\
+    $P(A+B)=P(A)+P(B),AB=\not o 1$ 
+\end{document}
